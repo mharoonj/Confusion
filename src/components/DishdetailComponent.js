@@ -134,7 +134,7 @@ Submit Comment</Button>
        
         return (
             <div className="container">
-                <CommentForm toggle={this.toggle} isOpened={this.state.modal} />
+                <CommentForm dishId={this.props.dish.id} addComment={this.props.addComment} toggle={this.toggle} isOpened={this.state.modal} />
                 <div className="row">
                     <Breadcrumb>
 
@@ -151,7 +151,7 @@ Submit Comment</Button>
                         <RenderDish dish={this.props.dish} />
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        <RenderComments comments={this.props.comments} />
+                        <RenderComments addComment={this.props.addComment} comments={this.props.comments} />
                     </div>
                 </div>
                 </div>
